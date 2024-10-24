@@ -7,25 +7,23 @@ This repository is the starting point of the assignments given in the course [Co
 
 ## Vera Molnar, 1974, dalla serie (Des)ordres 1
 
- Questo progetto è una reinterpretazione dell'opera di Vera Molnar, parte della serie "(DES)ordres", realizzata nel 1974. Molnar, pioniera dell'arte generativa, esplora le interazioni tra ordine e caos per creare opere visive dinamiche. La mia versione, sviluppata in p5, mantiene questi temi, integrando elementi di randomicità attraverso il codice.
+ Questo progetto è una reinterpretazione dell'opera di Vera Molnar, parte della serie "(DES)ordres", realizzata nel 1974. Molnar, pioniera dell'arte generativa, esplora le interazioni tra ordine e caos per creare opere visive dinamiche. La mia versione, sviluppata in p5.js, mantiene questi temi, integrando elementi di randomicità attraverso il codice.
   
  ### Setup Iniziale
 
-  Ho strutturato il mio canvas tremite un griglia quadrata 17x17 con "gridSize". Pero ogni cella della grigia ho pensato di creare un ciclo di quadrilateri irregolri, tramite la funzione random del posizionamento dei vertici, concentrici. 
-  Inizialmente avevo impostato per ogni ciclo un numero base di quadrilateri concentrici pari a 9; in seguito mi sono resa conto che, nell' oper di Ver Molnar non tutti i cicli presentavano lo stesso numero di quadrilateri. Così ho pensato di creare una funzione che mi permettesse di randomicizzare e diminuire il numero di quadrilateri in circa 2/3 dei cicli. 
+ Ho strutturato il mio canvas tramite una griglia quadrata 17x17 con "gridSize". Per ogni cella della griglia, ho pensato di creare un ciclo di quadrilateri irregolari, tramite la funzione random del posizionamento dei vertici, concentrici. Inizialmente avevo impostato per ogni ciclo un numero base di quadrilateri concentrici pari a 9; in seguito, mi sono resa conto che, nell'opera di Vera Molnar, non tutti i cicli presentavano lo stesso numero di quadrilateri. Così ho pensato di creare una funzione che mi permettesse di randomicizzare e diminuire il numero di quadrilateri in circa 2/3 dei cicli.
 
  ### Array "randomReduction"
  
- Dopo le considerazioni iniziali, ho deciso di utllizzare un array (seguendo anche alcuni tutorial). L'array "randomReduction" è utilizzato per memorizzare le posizioni dei cicli nella griglia che subiscono una riduzione casuale nel numero di quadrilateri concentrici disegnati. 
+ Dopo le considerazioni iniziali, ho deciso di utilizzare un array (seguendo anche alcuni tutorial). L'array "randomReduction" è utilizzato per memorizzare le posizioni dei cicli nella griglia che subiscono una riduzione casuale nel numero di quadrilateri concentrici disegnati.
 
  ### Disegno della Griglia
 
- Tramite un ciclo annidato ho disegnato i quadrilateri in ogni punto della griglia centrata nel canvas. 
- La gabbia è strutturata in modo tale che quando un ciclo si trova in "randomReduction", il numero di quadrilateri da disegnare per quel punto diventa casuale, variando tra 3 e 8 (che sia quindi un valore inferiore a quello scelto di base).
+ Tramite un ciclo annidato, ho disegnato i quadrilateri in ogni punto della griglia centrata nel canvas. La griglia è strutturata in modo tale che quando un ciclo si trova in "randomReduction", il numero di quadrilateri da disegnare per quel punto diventa casuale, variando tra 3 e 8 (valori inferiore a quello scelto di base).
 
  ### Funzione "drawQuadCycle"
 
- Con questa funzione ho disegnato i quadrilateri concentrici, con un fattore di riduzione "shrinkFactor" che varia per ciascun quadrato, creando l'effetto di quadrilateri sempre più piccoli verso il centro di ogni ciclo.
+ Con questa funzione, ho disegnato i quadrilateri concentrici, con un fattore di riduzione "shrinkFactor" che varia per ciascun quadrato, creando l'effetto di quadrilateri sempre più piccoli verso il centro di ogni ciclo.
 
  ### Generazione dei Vertici
 
@@ -33,5 +31,4 @@ This repository is the starting point of the assignments given in the course [Co
 
  ### Ridimensionamento del Canvas
 
- Ho veerificato che il canvas si ridimensionasse in base al display su cui viene visualizzato, mantenendo l'opera sempre visibile tramite la funzione "window".
-
+ Ho verificato che il canvas si ridimensionasse in base al display su cui viene visualizzato, mantenendo l'opera sempre visibile tramite la funzione "window".
