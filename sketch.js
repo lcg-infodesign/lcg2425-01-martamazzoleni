@@ -9,8 +9,8 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   gridSpacing = (min(width, height) - 2 * margin) / gridSize;
   noFill();
-  background(255); 
-  stroke(0); 
+  background("#f4f1e3"); 
+  stroke("#7b7165"); 
   strokeWeight(0.5); 
 
   //array cicli con - quad.
